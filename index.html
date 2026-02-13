@@ -7,15 +7,16 @@
 </head>
 <body>
 
-<!-- Envelope Start Screen -->
+<!-- START SCREEN -->
 <div id="startScreen">
-  <div id="envelope">
-    💌
-    <p>Open My Valentine Puzzle</p>
+  <div id="envelope" onclick="openGame()">
+    <div class="flap"></div>
+    <div class="heart">❤</div>
   </div>
+  <p class="startText">Open My Valentine Puzzle</p>
 </div>
 
-<!-- Puzzle Screen -->
+<!-- GAME SCREEN -->
 <div id="game" class="hidden">
   <h1>❤️ Solve the Puzzle ❤️</h1>
   <div id="puzzle"></div>

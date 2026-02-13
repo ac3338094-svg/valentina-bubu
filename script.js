@@ -1,28 +1,29 @@
-const IMAGE_SRC = "picture.jpeg";
-const GRID = 3;
+const IMAGE_SRC="picture.jpeg";
+const GRID=3;
 
-const puzzle = document.getElementById("puzzle");
-const startScreen = document.getElementById("startScreen");
-const game = document.getElementById("game");
+const startScreen=document.getElementById("startScreen");
+const game=document.getElementById("game");
+const puzzle=document.getElementById("puzzle");
 
-let correctOrder = [];
-let tiles = [];
+let correctOrder=[];
+let tiles=[];
 
-// Envelope click
-startScreen.onclick = () => {
+function openGame(){
   startScreen.classList.add("hidden");
   game.classList.remove("hidden");
   sliceImage();
-};
+}
 
 function sliceImage(){
-  const img = new Image();
-  img.crossOrigin = "anonymous";
-  img.src = IMAGE_SRC;
+  const img=new Image();
+  img.crossOrigin="anonymous";
+  img.src=IMAGE_SRC;
 
-  img.onload = ()=>{
-    const w = img.width/GRID;
-    const h = img.height/GRID;
+  img.onload=()=>{
+    const w=img.width/GRID;
+    const h=img.height/GRID;
+
+    correctOrder=[];
 
     for(let y=0;y<GRID;y++){
       for(let x=0;x<GRID;x++){
